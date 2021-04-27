@@ -1,14 +1,20 @@
-package proyecto;
-import java.util.*;
+package Trabajo;
+
+import java.util.Random;
+
+
 
 public class Dado {
+	//Atributos
 	private static Dado miDado;
-	Random al;
+	Random nAle;
 	
+	//Constructora
 	private Dado() {
-		al = new Random();
+		nAle = new Random();
 	}
 	
+	//Otros Metodos
 	public static Dado getDado() {
 		if (Dado.miDado == null) {
 			Dado.miDado = new Dado();
@@ -17,7 +23,7 @@ public class Dado {
 	}
 	
 	public int lanzarDado() {
-		int n = al.nextInt(6) + 1;
+		int n = nAle.nextInt(6) + 1;
 		return n;
 	}
 }
